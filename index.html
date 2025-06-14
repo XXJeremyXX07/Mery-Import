@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mery Import | Mayorista de útiles, bicicletas, mochilas y más</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mery Import: tienda mayorista de útiles escolares, bicicletas, mochilas originales y artículos para mascotas. Calidad, variedad y los mejores precios.">
+    <link rel="icon" href="1.png">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- LOADER ANIMADO -->
+    <div id="loader-bg">
+        <div class="loader-content">
+            <img src="1.png" alt="Logo Mery Import" class="loader-logo">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Cargando Mery Import...</div>
+        </div>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51999888777" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-nav">
+            <img src="1.png" alt="Logo Mery Import" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="utiles.html">Útiles</a></li>
+                    <li><a href="bicicletas.html">Bicicletas</a></li>
+                    <li><a href="mochilas.html">Mochilas</a></li>
+                    <li><a href="mochilas-originales.html">Mochilas Originales</a></li>
+                    <li><a href="mascotas.html">Mascotas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER SLIDER -->
+    <section class="banner-slider">
+        <div class="slider" id="slider">
+            <div class="slide active">
+                <img src="BANER/1.png" alt="Útiles Escolares">
+                <div class="slide-text">
+                    <h1>Mery Import: Confianza y variedad para tu negocio y familia</h1>
+                    <p>Mayoristas en útiles escolares, bicicletas, mochilas originales y artículos para mascotas. ¡Compra directo, ahorra y crece con nosotros!</p>
+                    <a href="#empresa" class="btn-slide">Conócenos</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="BANER/2.png" alt="Bicicletas">
+                <div class="slide-text">
+                    <h1>Bicicletas para todos</h1>
+                    <p>Desde modelos urbanos hasta montaña y eléctricas. Seguridad y garantía real.</p>
+                    <a href="bicicletas.html" class="btn-slide">Ver bicicletas</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="BANER/3.png" alt="Mochilas">
+                <div class="slide-text">
+                    <h1>Mochilas originales y resistentes</h1>
+                    <p>Adidas, Nike y más marcas. ¡Surtido para mayoristas, colegios y público en general!</p>
+                    <a href="mochilas-originales.html" class="btn-slide">Ver mochilas</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="BANER/4.png" alt="Mascotas">
+                <div class="slide-text">
+                    <h1>Moda y cuidado para mascotas</h1>
+                    <p>Ropa, collares y juguetes para engreír a tu mejor amigo. ¡Stock mayorista y minorista!</p>
+                    <a href="mascotas.html" class="btn-slide">Ver mascotas</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+        </div>
+    </section>
+
+    <!-- EMPRESA / PRESENTACIÓN -->
+    <section class="empresa" id="empresa">
+        <div class="empresa-wrapper">
+            <div class="empresa-text">
+                <h2>BIENVENIDO A MERY IMPORT</h2>
+                <p>
+                    <strong>Mery Import</strong> es un mayorista y distribuidor peruano con más de 10 años de experiencia. Nos especializamos en útiles escolares, bicicletas, mochilas originales y artículos para mascotas.<br><br>
+                    Nuestro enfoque es ayudarte a equipar tu negocio, colegio o familia con productos de calidad, atención personalizada y precios competitivos.<br>
+                    <strong>¡Acompañamos el crecimiento de tu emprendimiento y tu hogar!</strong>
+                </p>
+                <ul class="empresa-list">
+                    <li><i class="fas fa-award"></i> Productos originales y garantizados</li>
+                    <li><i class="fas fa-shipping-fast"></i> Envíos a todo el Perú</li>
+                    <li><i class="fas fa-hand-holding-usd"></i> Precios mayoristas y promociones</li>
+                    <li><i class="fas fa-users"></i> Atención personalizada</li>
+                    <li><i class="fas fa-school"></i> Proveedores para colegios e instituciones</li>
+                    <li><i class="fas fa-store"></i> Asesoría para negocios y emprendedores</li>
+                </ul>
+            </div>
+            <div class="empresa-img">
+                <img src="1.png" alt="Atención al cliente Mery Import">
+                <div class="empresa-banner-info">
+                    <strong>Nuestra Visión:</strong> Ser líderes en distribución a nivel nacional. <br>
+                    <strong>Nuestros clientes:</strong> Colegios, librerías, negocios, familias y emprendedores.<br>
+                    <strong>+5,000</strong> clientes satisfechos en todo el Perú.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS EXCLUSIVOS -->
+    <section class="servicios">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="servicios-grid">
+            <div class="servicio">
+                <i class="fas fa-truck-moving"></i>
+                <h3>Envíos rápidos</h3>
+                <p>Despachamos a todo el Perú y tenemos recojo en tienda.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-tags"></i>
+                <h3>Descuentos mayoristas</h3>
+                <p>Precios especiales para instituciones y negocios.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Garantía real</h3>
+                <p>Todos nuestros productos tienen garantía y soporte.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-user-headset"></i>
+                <h3>Atención personalizada</h3>
+                <p>Te asesoramos en cada paso de tu compra.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="destacados">
+        <h2>Nuestros productos estrella</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=400" alt="Cuadernos">
+                <h3>Cuadernos Premium</h3>
+                <p>Rayados y cuadriculados, tapa dura, varios diseños. Calidad garantizada.</p>
+                <span>S/ 8.90</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400" alt="Bicicleta Urbana">
+                <h3>Bicicleta Urbana</h3>
+                <p>Rueda 26", marco de aluminio, cambios Shimano, ideal para la ciudad.</p>
+                <span>S/ 499.00</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400" alt="Mochila Adidas">
+                <h3>Mochila Adidas</h3>
+                <p>Espalda acolchada, compartimentos múltiples. Diseño exclusivo y resistente.</p>
+                <span>S/ 149.00</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400" alt="Ropa Mascotas">
+                <h3>Ropa Mascotas</h3>
+                <p>Suéteres, chalecos y collares para perros y gatos. Tallas para todos.</p>
+                <span>S/ 29.90</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400" alt="Colores">
+                <h3>Colores x12</h3>
+                <p>Colores intensos, resistentes y no tóxicos. Para escolares y artistas.</p>
+                <span>S/ 7.90</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1470429346534-d7d4e4c9f3d8?w=400" alt="Kit de Reglas">
+                <h3>Kit de Reglas</h3>
+                <p>Incluye regla, escuadra, transportador y compás. Plástico resistente.</p>
+                <span>S/ 6.50</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518655048521-f130df041f66?w=400" alt="Bicicleta Montaña">
+                <h3>Bicicleta Montaña</h3>
+                <p>Suspensión delantera, frenos de disco, lista para la aventura.</p>
+                <span>S/ 589.00</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400" alt="Cartuchera">
+                <h3>Cartuchera triple</h3>
+                <p>Resistente, varios colores y compartimentos.</p>
+                <span>S/ 14.90</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400" alt="Set Plumones">
+                <h3>Set de plumones</h3>
+                <p>Punta fina, colores intensos, pack x12.</p>
+                <span>S/ 12.90</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400" alt="Lonchera Térmica">
+                <h3>Lonchera térmica</h3>
+                <p>Aislante, diseños para niños, fácil limpieza.</p>
+                <span>S/ 25.90</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400" alt="Toma Todo">
+                <h3>Toma todo deportivo</h3>
+                <p>500ml, plástico libre de BPA, colores variados.</p>
+                <span>S/ 10.90</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400" alt="Bolso multiuso">
+                <h3>Bolso multiuso</h3>
+                <p>Ideal para gimnasio, viajes o colegio.</p>
+                <span>S/ 28.00</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526178613658-3e882ecd6b84?w=400" alt="Mochila Totto">
+                <h3>Mochila Totto</h3>
+                <p>Modelo juvenil, resistente al agua, super práctica.</p>
+                <span>S/ 139.00</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400" alt="Bolígrafo Gel">
+                <h3>Bolígrafo Gel</h3>
+                <p>Tinta suave, secado rápido, pack x5 colores.</p>
+                <span>S/ 8.50</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400" alt="Pegamento Escolar">
+                <h3>Pegamento Escolar</h3>
+                <p>No tóxico, lavable, ideal para manualidades.</p>
+                <span>S/ 3.50</span>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=400" alt="Cinta Scotch">
+                <h3>Cinta Scotch</h3>
+                <p>Transparente, resistente, fácil cortar.</p>
+                <span>S/ 2.80</span>
+            </div>
+        </div>
+        <div class="destacados-cta">
+            <a href="contacto.html" class="btn-slide">Cotiza tu pedido mayorista</a>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS / CLIENTES -->
+    <section class="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonios-slider" id="testimonios-slider">
+            <div class="testimonio active">
+                <p>“Mery Import es nuestro proveedor de confianza cada año escolar. ¡Precios y atención A1!”</p>
+                <span>- Librería San Juan</span>
+            </div>
+            <div class="testimonio">
+                <p>“Compré bicicletas y mochilas para mi tienda, ¡todo llegó rápido y en perfectas condiciones!”</p>
+                <span>- Rosa, emprendedora</span>
+            </div>
+            <div class="testimonio">
+                <p>“Me encanta la variedad de productos y la calidad. ¡Recomendado!”</p>
+                <span>- Javier, papá de dos niños</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN Y CONTACTO -->
+    <section class="ubicacion">
+        <h2>Visítanos o haz tu pedido</h2>
+        <div class="ubicacion-data">
+            <div>
+                <i class="fas fa-map-marker-alt"></i> Calle Ejemplo 123, Lima, Perú
+            </div>
+            <div>
+                <i class="fas fa-phone"></i> +51 999 888 777
+            </div>
+            <div>
+                <i class="fab fa-whatsapp"></i> <a href="https://wa.me/51999888777" target="_blank">Chatea por WhatsApp</a>
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> <a href="mailto:ventas@meryimport.com">ventas@meryimport.com</a>
+            </div>
+        </div>
+        <iframe src="https://maps.google.com/maps?q=-12.0464,-77.0428&z=17&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="ubicacion-horario">
+            <i class="fas fa-clock"></i> L-V: 9am-7pm | Sábado: 10am-5pm | Domingo: Cerrado
+        </div>
+    </section>
+
+    <!-- FOOTER ENRIQUECIDO -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="1.png" class="logo" alt="Logo Mery Import">
+                <div class="footer-title">Mery Import</div>
+                <div class="footer-desc">Mayoristas y distribuidores de útiles escolares, bicicletas, mochilas y más.<br>
+                Creciendo contigo desde 2010.</div>
+            </div>
+            <div class="footer-sections">
+                <div class="footer-links">
+                    <h4>Productos</h4>
+                    <a href="utiles.html">Útiles escolares</a>
+                    <a href="bicicletas.html">Bicicletas</a>
+                    <a href="mochilas.html">Mochilas</a>
+                    <a href="mochilas-originales.html">Mochilas Originales</a>
+                    <a href="mascotas.html">Mascotas</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <a href="index.html">Inicio</a>
+                    <a href="#empresa">¿Quiénes somos?</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <div><i class="fas fa-map-marker-alt"></i> Lima, Perú</div>
+                    <div><i class="fas fa-envelope"></i> <a href="mailto:ventas@meryimport.com">ventas@meryimport.com</a></div>
+                    <div><i class="fab fa-whatsapp"></i> <a href="https://wa.me/51999888777" target="_blank">+51 999 888 777</a></div>
+                    <div><i class="fas fa-clock"></i> L-V: 9am-7pm</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2025 Mery Import. Todos los derechos reservados.</span>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/51999888777" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+ <!-- LOADER SCRIPT + SLIDER SCRIPT + MENU MOBILE -->
+    <script>
+    // Pantalla de carga 3s
+    window.addEventListener('load', function() {
+        setTimeout(function(){
+            document.getElementById('loader-bg').style.opacity = 0;
+            setTimeout(function(){
+                document.getElementById('loader-bg').style.display = "none";
+            }, 500);
+        }, 1600);
+    });
+
+    // Slider automático y controles
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.slider-dot');
+    let current = 0;
+    function showSlide(idx) {
+        slides.forEach((s,i) => {
+            s.classList.toggle('active', i === idx);
+            dots[i].classList.toggle('active', i === idx);
+        });
+        current = idx;
+    }
+    dots.forEach((dot,i) => {
+        dot.onclick = () => showSlide(i);
+    });
+    setInterval(()=>showSlide((current+1)%slides.length), 6000);
+
+    // Menú hamburguesa
+    const menuBtn = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+    menuBtn.onclick = function() {
+      nav.classList.toggle("open");
+      menuBtn.classList.toggle("open");
+      menuBtn.innerHTML = nav.classList.contains("open")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    };
+    nav.querySelectorAll("a").forEach(a => {
+      a.onclick = () => {
+        if(window.innerWidth < 900) {
+          nav.classList.remove("open");
+          menuBtn.classList.remove("open");
+          menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      }
+    });
+    </script>
+</body>
+</html>

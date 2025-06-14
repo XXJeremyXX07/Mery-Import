@@ -1,0 +1,584 @@
+:root {
+  --rojo: #e2001a;
+  --azul: #0352A0;
+  --azul2: #2980d7;
+  --verde: #25D366;
+  --gris: #f7f9fa;
+  --gris2: #e9f2fb;
+  --negro: #232323;
+  --radius: 30px;
+  --shadow: 0 2px 30px #e2001a26;
+  --degradado: linear-gradient(90deg, #e2001a 0%, #0352A0 80%, #6ec6ff 100%);
+}
+
+html {scroll-behavior: smooth;}
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(120deg, var(--gris) 0%, var(--gris2) 100%);
+  color: var(--negro);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* WhatsApp flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 1001;
+    background: var(--verde);
+    color: #fff;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    box-shadow: 0 4px 26px #2228;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4em;
+    transition: transform .2s, box-shadow .2s, background .2s;
+    cursor: pointer;
+    animation: floatWsp 1.8s infinite alternate;
+}
+@keyframes floatWsp {
+    from {transform: translateY(0);}
+    to {transform: translateY(-12px);}
+}
+.whatsapp-float:hover {
+    background: #20b95a;
+    transform: scale(1.1) translateY(-15px);
+    box-shadow: 0 8px 32px #25D366cc;
+}
+
+/* HEADER centrado y no sticky */
+header {
+  width: 100vw;
+  min-height: 110px;
+  background: var(--degradado);
+  box-shadow: 0 4px 30px #e2001a0c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* position: sticky; */
+  /* top: 0; */
+  z-index: 100;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  transition: background 0.3s;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.logo-nav {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0 3vw;
+}
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 28px;
+  border: 4px solid #fff;
+  background: #232323;
+  box-shadow: 0 2px 16px #e2001a26;
+  transition: transform 0.2s;
+  object-fit: contain;
+  display: block;
+  margin: 18px auto 0 auto;
+}
+.logo:hover { transform: scale(1.04) rotate(-4deg);}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+}
+nav li {display: flex;}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.16em;
+  padding: 13px 36px;
+  border-radius: 16px;
+  letter-spacing: .02em;
+  background: transparent;
+  transition: background .18s, color .18s, transform .11s, box-shadow .13s;
+  min-width: 110px;
+  text-align: center;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+nav a.active, nav a:hover {
+  background: #fff;
+  color: var(--rojo);
+  font-weight: 900;
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 2px 12px #e2001a24;
+}
+nav a.active:after, nav a:hover:after {
+  content: '';
+  display: block;
+  width: 55%;
+  margin: 2px auto 0 auto;
+  border-bottom: 2.5px solid var(--rojo);
+  opacity: 0.7;
+}
+
+/* Banner mascotas */
+.mascotas-banner {
+  position: relative;
+  width: 100vw;
+  min-height: 270px;
+  max-height: 370px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--azul);
+}
+.banner-img {
+  width: 100vw;
+  min-height: 270px;
+  max-height: 370px;
+  object-fit: cover;
+  filter: brightness(.60) blur(1.1px);
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  z-index: 1;
+  animation: imgPop 1.2s;
+}
+@keyframes imgPop {
+  from {filter:brightness(.4) scale(1.08);}
+  to {filter:brightness(.6) scale(1);}
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 55px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.anim-title {
+  font-size: 2.6em;
+  margin-bottom: 10px;
+  letter-spacing: .09em;
+  font-weight: 900;
+  text-shadow: 0 3px 24px #23232344;
+  animation: fadeInDown .9s;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+.anim-subtitle {
+  font-size: 1.2em;
+  letter-spacing: .02em;
+  text-shadow: 0 2px 12px #23232333;
+  animation: fadeInUp .9s;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+/* Intro */
+.intro-categoria {
+  background: var(--gris);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 45px 0 32px 0;
+  min-height: 220px;
+}
+.intro-text {
+  flex: 1 1 370px;
+  min-width: 260px;
+  max-width: 470px;
+}
+.intro-text h2 {
+  color: var(--rojo);
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+.intro-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 17px;
+}
+.intro-text ul li {
+  font-size: 1.08em;
+  margin-bottom: 7px;
+  color: var(--azul2);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.intro-text ul i { color: var(--rojo);}
+.intro-extra {
+  color: var(--negro);
+  font-style: italic;
+  font-size: 1em;
+  margin-bottom: 18px;
+}
+.btn-contacto {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--rojo) 80%, var(--azul) 120%);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1.07em;
+  text-decoration: none;
+  margin-top: 7px;
+  box-shadow: 0 2px 16px #e2001a22;
+  transition: background .16s, transform .14s;
+  animation: btnPulse 2.2s infinite alternate;
+}
+@keyframes btnPulse {
+  from {box-shadow: 0 2px 16px #e2001a22;}
+  to {box-shadow: 0 6px 30px #e2001a44;}
+}
+.btn-contacto:hover {
+  background: linear-gradient(90deg, var(--azul) 60%, var(--rojo) 120%);
+  transform: scale(1.08);
+}
+.intro-img {
+  flex: 1 1 260px;
+  max-width: 340px;
+  text-align: right;
+}
+.intro-img img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 2px 24px #e2001a13;
+}
+
+/* Cards mascotas */
+.productos-scroll {
+  background: #fff;
+  padding: 45px 0 28px 0;
+  text-align: center;
+}
+.productos-scroll h2 {
+  color: var(--rojo);
+  font-size: 1.5em;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.cards-scroll {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 34px;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 0 5vw;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  text-align: center;
+  color: var(--negro);
+  padding-bottom: 15px;
+  margin-bottom: 6px;
+  transition: transform .18s, box-shadow .18s, border .18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2.5px solid transparent;
+  animation: cardEntry .8s;
+}
+@keyframes cardEntry {
+  from {opacity:0;transform:scale(.85) translateY(40px);}
+  to {opacity:1;transform:scale(1) translateY(0);}
+}
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+  box-shadow: 0 2px 14px #e2001a15;
+}
+.card h3 {
+  margin: 17px 0 8px 0;
+  font-size: 1.09em;
+  color: var(--rojo);
+}
+.card p {
+  font-size: .98em;
+  color: #333;
+  min-height: 36px;
+  margin: 0 0 7px 0;
+}
+.card span {
+  color: var(--azul2);
+  font-weight: 700;
+  font-size: 1.09em;
+}
+.card:hover {
+  transform: scale(1.08) translateY(-8px) rotate(-2deg);
+  box-shadow: 0 8px 24px #e2001a33;
+  border: 2.5px solid var(--rojo);
+}
+.productos-cta {
+  margin: 32px 0 0 0;
+  text-align: center;
+}
+.productos-cta .btn-contacto {
+  font-size: 1em;
+  padding: 12px 36px;
+}
+
+/* Ventajas mascotas */
+.ventajas-mascotas {
+  background: var(--gris2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 48px 0 35px 0;
+  min-height: 220px;
+  animation: fadeInUp 1s;
+}
+.ventajas-lista {
+  flex: 1 1 340px;
+  min-width: 270px;
+  max-width: 470px;
+}
+.ventajas-lista h2 {
+  color: var(--rojo);
+  font-size: 1.24em;
+  margin-bottom: 13px;
+  font-weight: 900;
+}
+.ventajas-lista ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.ventajas-lista ul li {
+  font-size: 1.08em;
+  margin-bottom: 9px;
+  color: var(--azul2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ventajas-lista ul i { color: var(--rojo);}
+.ventajas-img {
+  flex: 1 1 260px;
+  max-width: 350px;
+  text-align: right;
+}
+.ventajas-img img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 2px 28px #e2001a23;
+}
+
+/* Footer mejorado */
+footer {
+  background: linear-gradient(90deg, #0352A0 0%, #e2001a 120%);
+  color: #fff;
+  border-top: 5px solid var(--rojo);
+  margin-top: 0;
+  padding: 0;
+}
+.footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 5vw 13px 5vw;
+  gap: 30px 50px;
+}
+.footer-brand {
+  min-width: 210px;
+  max-width: 320px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-brand .logo {
+  width: 54px;
+  height: 54px;
+  border: 2px solid #fff;
+  margin-bottom: 8px;
+}
+.footer-title {
+  font-size: 1.25em;
+  font-weight: 800;
+  margin-bottom: 5px;
+  letter-spacing: .02em;
+}
+.footer-desc {
+  font-size: .98em;
+  line-height: 1.4;
+  color: #e0eaff;
+}
+.footer-sections {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
+}
+.footer-links {
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-links h4 {
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 1.08em;
+  font-weight: bold;
+}
+.footer-links a {
+  color: #e0eaff;
+  text-decoration: none;
+  font-size: .97em;
+  transition: color .14s;
+  padding: 3px 0;
+  border-radius: 4px;
+}
+.footer-links a.active, .footer-links a:hover {
+  color: #f87171;
+  background: #fff2;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5vw 14px 5vw;
+  border-top: 1.5px solid var(--rojo)44;
+  font-size: .99em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+.footer-social a {
+  color: #fff;
+  font-size: 1.4em;
+  transition: color .14s;
+  padding: 0 2px;
+}
+.footer-social a:hover {
+  color: #25D366;
+}
+
+/* Responsive para móvil: logo centrado arriba */
+@media (max-width: 900px) {
+  header {
+    min-height: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .logo-nav {
+    max-width: 100vw;
+    width: 100vw;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .logo {
+    width: 78px;
+    height: 78px;
+    border-radius: 16px;
+    margin: 14px auto 0 auto;
+    display: block;
+    border-width: 3px;
+  }
+  nav {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    align-items: stretch;
+  }
+  nav li {
+    width: 100vw;
+    align-items: stretch;
+  }
+  nav a {
+    width: 100vw;
+    font-size: 1.12em;
+    padding: 14px 0;
+    border-radius: 0;
+    min-width: unset;
+    text-align: center;
+    margin: 0;
+    background: transparent;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    margin: 10px auto 0 auto;
+    border-width: 2px;
+  }
+  nav a {
+    font-size: 1em;
+    padding: 12px 0;
+  }
+  .mascotas-banner, .banner-img {min-height: 150px; max-height: 180px;}
+  .banner-content {padding: 18px 0;}
+  .anim-title {font-size: 1.4em;}
+  .intro-categoria, .ventajas-mascotas {flex-direction: column; gap: 18px;}
+  .intro-img, .ventajas-img {max-width: 220px;}
+  .cards-scroll {grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));}
+  .footer-main, .footer-bottom {padding-left: 2vw; padding-right: 2vw;}
+  .whatsapp-float {width: 40px; height: 40px; font-size: 1.2em; right: 7px; bottom: 7px;}
+}
